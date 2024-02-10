@@ -1,14 +1,9 @@
 import { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import { config } from "@/config";
 
-export const metadata: Metadata = {
-  title: {
-    default: "Next Markdown Wiki",
-    template: "%s :: Next Markdown Wiki",
-  },
-  generator: "Next Markdown Wiki",
-};
+export const metadata: Metadata = config.metadata;
 
 const montserrat = Montserrat({
   subsets: ["latin", "cyrillic", "cyrillic-ext"],

@@ -4,6 +4,7 @@ import { Footer } from "../Footer";
 import Image from "next/image";
 
 import styles from "./Layout.module.css";
+import { config } from "@/config";
 
 interface ILayourProps {
   children: React.ReactNode;
@@ -11,10 +12,7 @@ interface ILayourProps {
 
 export const Layout: React.FC<ILayourProps> = ({ children }) => (
   <section className={styles.layout}>
-    <Header
-      title="Next Markdown Wiki"
-      slogan="Turn markdown into Next.js website"
-    >
+    <Header title={config.title} slogan={config.slogan}>
       <a
         href="https://www.buymeacoffee.com/slawwwa"
         target="_blank"
@@ -43,6 +41,11 @@ export const Layout: React.FC<ILayourProps> = ({ children }) => (
         Powered by{" "}
         <a href="https://nextjs.org/" target="_blank">
           Next.js
+        </a>
+        <small className={styles.small}>/</small>
+        Follow project on{" "}
+        <a href="https://github.com/b-ff/next-markdown-wiki" target="_blank">
+          GitHub
         </a>
       </section>
     </Footer>

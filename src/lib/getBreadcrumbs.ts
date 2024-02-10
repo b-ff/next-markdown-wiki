@@ -23,14 +23,12 @@ export function getBreadcrumbs(pathSegments: string[]): IBreadcrumb[] {
   }, '')
 
 
-  return paths.map((pageUrl, idx) => {
-    const isLast = idx === paths.length - 1
-    const safePageUrl = isLast ? `${pageUrl}.md` : `${pageUrl}/index.md`
-
+  return paths.map((pageUrl) => {
     let fileContents: string;
 
     try {
-      fileContents = fs.readFileSync(path.join(postsDirectory, safePageUrl), 'utf8')
+      const fullPath = path.join(postsDirectory, pageUrl)
+      fileContents = fs.existsSync(fullPath) && fs.lstatSync(fullPath).isDirectory() ? fs.readFileSync(`${fullPath}/index.md`, 'utf8') : fs.readFileSync(`${fullPath}.md`, 'utf8')
     } catch (error) {
       console.error(error)
       fileContents = ''
