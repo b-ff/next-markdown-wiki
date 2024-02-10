@@ -19,7 +19,7 @@ Well, few reasons actually:
 - I'm a software engineer
 - I'm a lazy software engineer
 - I love to publish random, minimalistic and elegant websites with information about something
-- I'm considering to add some killer features that would that will work for my laziness
+- I'm considering to add some killer features that will work for my laziness
 
 ## How it works?
 
