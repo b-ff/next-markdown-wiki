@@ -13,7 +13,6 @@ export const config: IAppConfig = {
     title: {
       default: "Next Markdown Wiki",
       template: "%s :: Next Markdown Wiki",
-    },
-    generator: "Next Markdown Wiki",
+    }
   }
 }
