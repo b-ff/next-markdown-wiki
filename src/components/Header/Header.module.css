@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-block-end: 0.25rem;
+}
+
+.slogan {
+  font-size: 0.75rem;
+  color: var(--colorFontTertiary);
+}

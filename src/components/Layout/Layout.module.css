@@ -1,0 +1,28 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  max-width: 960px;
+  min-width: 640px;
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+  padding: 4rem 0;
+}
+
+.small {
+  display: inline-block;
+  font-size: 0.75rem;
+  margin: 0 0.5rem;
+  opacity: 0.5;
+}
+
+.coffeeButton {
+  filter: grayscale(0.5);
+  transition: filter 0.2s ease-in-out;
+}
+
+.coffeeButton:hover {
+  filter: grayscale(0);
+}
