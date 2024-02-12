@@ -1,6 +1,7 @@
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Layout } from "@/components/Layout";
 import { IBreadcrumb, getBreadcrumbs } from "@/lib/getBreadcrumbs";
+import { getStaticPaths } from "@/lib/getStaticPaths";
 import { getPageContent } from "@/lib/getPageContent";
 import { Metadata } from "next";
 
@@ -37,10 +38,14 @@ export async function generateMetadata({
   const { path } = params;
 
   try {
-    // fetch data
     const { meta } = await getPageContent(path.join("/"));
     return meta;
   } catch (error: any) {
     return {};
   }
+}
+
+// used for static pages generation
+export async function generateStaticParams() {
+  return getStaticPaths().map((path) => ({ path }));
 }
