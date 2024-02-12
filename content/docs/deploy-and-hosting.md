@@ -4,7 +4,7 @@ title: "Deploying & Hosting"
 
 # Deploying & Hosting
 
-> There are two chairs... (going to be)
+> There are two chairs...
 
 ## Automatic rebuild and deploy options:
 
