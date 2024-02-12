@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { Montserrat } from "next/font/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
 import { config } from "@/config";
 
@@ -20,6 +21,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={[montserrat.className].join(" ")}>{children}</body>
+      {config.googleTagManagerId ? (
+        <GoogleTagManager gtmId={config.googleTagManagerId} />
+      ) : null}
     </html>
   );
 }

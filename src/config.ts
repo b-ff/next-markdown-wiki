@@ -2,7 +2,8 @@ import { Metadata } from "next";
 
 interface IAppConfig {
   title: string,
-  slogan: string,
+  slogan?: string,
+  googleTagManagerId?: string;
   metadata: Metadata
 }
 
