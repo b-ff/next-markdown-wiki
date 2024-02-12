@@ -12,7 +12,11 @@ interface ILayourProps {
 
 export const Layout: React.FC<ILayourProps> = ({ children }) => (
   <section className={styles.layout}>
-    <Header title={config.title} slogan={config.slogan}>
+    <Header
+      title={config.title}
+      slogan={config.slogan}
+      logoSrc="/sample-logo.jpg"
+    >
       <a
         href="https://www.buymeacoffee.com/slawwwa"
         target="_blank"
@@ -41,6 +45,14 @@ export const Layout: React.FC<ILayourProps> = ({ children }) => (
         Powered by{" "}
         <a href="https://nextjs.org/" target="_blank">
           Next.js
+        </a>
+        <small className={styles.small}>/</small>
+        Image by GarryKillian on{" "}
+        <a
+          href="https://www.freepik.com/free-vector/abstract-vector-colorful-mesh-dark-background-futuristic-style-card-elegant-background-business-presentations-corrupted-point-sphere-chaos-aesthetics_22421018.htm#page=2&query=glitch&position=37&from_view=search&track=sph&uuid=6388ac6a-d0cf-4bf4-b0af-0a54ba9ce8e9"
+          target="_blank"
+        >
+          Freepik
         </a>
         <small className={styles.small}>/</small>
         Follow project on{" "}
