@@ -6,6 +6,13 @@
   flex: 1;
 }
 
+@media screen and (max-width: 960px) {
+  .layout {
+    padding: 0 1rem;
+    box-sizing: border-box;
+  }
+}
+
 .main {
   flex: 1;
   padding: 4rem 0;

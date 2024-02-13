@@ -16,12 +16,15 @@ This method works best for scenario when you want to automatically deploy change
 - You can edit files with online IDE on your Git hosting
 - Depending on your configuration you might get autodeploy once your website's repo gets updated
 - You can add APIs and server scripts to use on your server
+- Custom "Not found" page
 
 ### Cons
 
 - You need to use specific hosting with running NodeJS and deploy pipelines
 - You need to understand how your deploy pipelines or CI/CD processes should be configured and work
 - This method requires some resources on your server to build pages dynamically.
+
+Make sure you DON'T have `output: "export"` in your `next.config.mjs`
 
 ### Setup deploy
 
@@ -41,6 +44,9 @@ This method works best for scenario when you want to automatically deploy change
 
 - You need to run build command yourself
 - You cannot add APIs or server scripts
+- No custom "Not found" page unless your hosting allows you to use custom HTML-page for this.
+
+Make sure you DO have `output: "export"` in your `next.config.mjs`
 
 ### How to generate static pages
 
