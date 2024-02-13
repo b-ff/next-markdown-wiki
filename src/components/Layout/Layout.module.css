@@ -1,8 +1,8 @@
 .layout {
   display: flex;
   flex-direction: column;
+  min-width: 320px;
   max-width: 960px;
-  min-width: 640px;
   flex: 1;
 }
 
@@ -16,6 +16,13 @@
 .main {
   flex: 1;
   padding: 4rem 0;
+}
+
+.main img {
+  max-width: min(75vw, 480px);
+  height: auto;
+  margin-inline-end: 1rem;
+  margin-block-end: 1rem;
 }
 
 .small {
